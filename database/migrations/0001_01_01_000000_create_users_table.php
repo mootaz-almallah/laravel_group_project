@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('phone', 20)->nullable();
             $table->string('profile_image')->nullable();
             $table->enum('role', ['superadmin', 'admin', 'team', 'user']);
+            $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
         });
